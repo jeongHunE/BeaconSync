@@ -1,0 +1,16 @@
+PODS:
+  - BeaconSync (0.1.0)
+
+DEPENDENCIES:
+  - BeaconSync (from `../`)
+
+EXTERNAL SOURCES:
+  BeaconSync:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BeaconSync: edbafca3a1e53c45ccb4c216cd04b9c9dd622bba
+
+PODFILE CHECKSUM: c5eda3187c039be907421e96e776d2bf290fe1d5
+
+COCOAPODS: 1.14.3

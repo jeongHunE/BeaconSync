@@ -28,9 +28,9 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/jeungHunLee/BeaconSync.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '14.0'
 
-  s.source_files = 'BeaconSync/Classes/**/*'
+  s.source_files = 'SourceCode/**/*'
   
   # s.resource_bundles = {
   #   'BeaconSync' => ['BeaconSync/Assets/*.png']

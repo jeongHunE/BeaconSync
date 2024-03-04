@@ -1,0 +1,6 @@
+framework module Pods_BeaconSync_Tests {
+  umbrella header "Pods-BeaconSync_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
