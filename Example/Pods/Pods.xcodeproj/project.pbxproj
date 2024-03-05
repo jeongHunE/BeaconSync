@@ -58,7 +58,7 @@
 		80C49F58EA9B16D881B4F8570C00E8AD /* Pods-BeaconSync_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BeaconSync_Example-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DC4D96D28C4EE4958949BACF2B2C32A /* Pods-BeaconSync_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BeaconSync_Example-frameworks.sh"; sourceTree = "<group>"; };
-		9E633424C4776E8C3806D676AD31C65F /* BeaconSync */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BeaconSync; path = BeaconSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E633424C4776E8C3806D676AD31C65F /* BeaconSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BeaconSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E3E079EE1FD58021515BC69D0121D1 /* Pods-BeaconSync_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BeaconSync_Tests.modulemap"; sourceTree = "<group>"; };
 		AD0AA5ABB275563FC85519483FE9ABC2 /* BeaconSync.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BeaconSync.modulemap; sourceTree = "<group>"; };
 		AD3C2A2FA9DAF156DE37FBFB1D124E9E /* BeaconSync-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BeaconSync-dummy.m"; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 		A946FE0FFD336AB66D135E533297A2CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9E633424C4776E8C3806D676AD31C65F /* BeaconSync */,
+				9E633424C4776E8C3806D676AD31C65F /* BeaconSync.framework */,
 				D1AB9D92F519B7835F32DD40612ACF10 /* Pods-BeaconSync_Example */,
 				DAADEA69A515718F47B8512D70737947 /* Pods-BeaconSync_Tests */,
 			);
@@ -282,7 +282,7 @@
 			);
 			name = BeaconSync;
 			productName = BeaconSync;
-			productReference = 9E633424C4776E8C3806D676AD31C65F /* BeaconSync */;
+			productReference = 9E633424C4776E8C3806D676AD31C65F /* BeaconSync.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3058F637C505BEA4B1AC6FB21AA8AC4A /* Pods-BeaconSync_Example */ = {
@@ -599,16 +599,20 @@
 				GCC_PREFIX_HEADER = "Target Support Files/BeaconSync/BeaconSync-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/BeaconSync/BeaconSync-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/BeaconSync/BeaconSync.modulemap";
 				PRODUCT_MODULE_NAME = BeaconSync;
 				PRODUCT_NAME = BeaconSync;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -696,16 +700,20 @@
 				GCC_PREFIX_HEADER = "Target Support Files/BeaconSync/BeaconSync-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/BeaconSync/BeaconSync-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/BeaconSync/BeaconSync.modulemap";
 				PRODUCT_MODULE_NAME = BeaconSync;
 				PRODUCT_NAME = BeaconSync;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
