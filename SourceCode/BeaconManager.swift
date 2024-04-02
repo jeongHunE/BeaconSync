@@ -24,7 +24,7 @@ class BeaconManager: NSObject, CLLocationManagerDelegate {
     
     //MARK: - Stop Beacon scanning
     func stopUpdateLocation() {
-        self.locationManager.stopUpdatingLocation()
+        stopMonitoring(for: uuid)
     }
     
     //MARK: - Tells the delegate when the app creates the location manager and when the authorization status changes
@@ -61,6 +61,17 @@ class BeaconManager: NSObject, CLLocationManagerDelegate {
         
         self.locationManager.startMonitoring(for: beaconRegion)    //beaconRegion 모니터링 시작
         self.locationManager.startRangingBeacons(satisfying: beaconConstraint)    //beacon 모니터링 시작
+    }
+    
+    private func stopMonitoring(for uuid: String) {
+        guard let uuid = UUID(uuidString: uuid) else {
+            fatalError("uuid is not valid")
+        }
+        
+        let beaconRegion = CLBeaconRegion(uuid: uuid, identifier: uuid.uuidString)
+        let beaconConstraint = CLBeaconIdentityConstraint(uuid: uuid)
+        self.locationManager.stopMonitoring(for: beaconRegion)
+        self.locationManager.stopRangingBeacons(satisfying: beaconConstraint)
     }
     
     //MARK: - Tells the delegate that the location manager detected at least one beacon that satisfies the provided constraint.
