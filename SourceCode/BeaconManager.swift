@@ -22,6 +22,11 @@ class BeaconManager: NSObject, CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
     }
     
+    //MARK: - Stop Beacon scanning
+    func stopUpdateLocation() {
+        self.locationManager.stopUpdatingLocation()
+    }
+    
     //MARK: - Tells the delegate when the app creates the location manager and when the authorization status changes
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         if manager.authorizationStatus == .authorizedAlways || manager.authorizationStatus == .authorizedWhenInUse {
